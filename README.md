@@ -4,40 +4,40 @@
 ![CSS](https://img.shields.io/badge/CSS3-responsivo-b88a4a?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-interativo-1f1f1f?style=for-the-badge&logo=javascript&logoColor=white)
 
-Uma landing page moderna para apresentar a ALGdivulga+ como uma marca de criacao de sites, landing pages, catalogos online e solucoes digitais com foco em credibilidade, contato rapido e conversao via WhatsApp.
+Uma landing page moderna para apresentar a ALGdivulga+ como uma marca de criação de sites, landing pages, catálogos online e soluções digitais com foco em credibilidade, contato rápido e conversão via WhatsApp.
 
 ![Preview da landing page ALGdivulga+](assets/hero-mockup-brand.png)
 
 ## Deploy
 
-Acesse a versao online:
+Acesse a versão online:
 
 https://algdivulga.netlify.app
 
-## O que chama atencao
+## O que chama atenção
 
-- Primeira dobra com proposta clara, CTA de orcamento e botao direto para WhatsApp.
+- Primeira dobra com proposta clara, CTA de orçamento e botão direto para WhatsApp.
 - Layout responsivo para celular, tablet e desktop.
-- Secoes comerciais completas: problema, solucao, beneficios, processo, portfolio, diferenciais, entrega, contato e FAQ.
-- Formulario que monta uma mensagem personalizada e abre o WhatsApp do atendimento.
-- Navegacao com menu mobile, destaque da secao ativa e header com efeito ao rolar a pagina.
-- Visual profissional com mockups, cards de portfolio e identidade consistente.
+- Seções comerciais completas: problema, solução, benefícios, processo, portfólio, diferenciais, entrega, contato e FAQ.
+- Formulário que monta uma mensagem personalizada e abre o WhatsApp do atendimento.
+- Navegação com menu mobile, destaque da seção ativa e header com efeito ao rolar a página.
+- Visual profissional com mockups, cards de portfólio e identidade consistente.
 
 ## Tecnologias
 
 Este projeto foi feito com uma base simples e direta:
 
-- `HTML5` para a estrutura da pagina.
+- `HTML5` para a estrutura da página.
 - `CSS3` para responsividade, layout, estados visuais e identidade.
-- `JavaScript` puro para navegacao, WhatsApp e formulario.
+- `JavaScript` puro para navegação, WhatsApp e formulário.
 
-Sem frameworks, sem build e sem dependencias externas obrigatorias.
+Sem frameworks, sem build e sem dependências externas obrigatórias.
 
 ## Como visualizar
 
 Abra o arquivo `index.html` diretamente no navegador.
 
-Tambem da para servir a pasta com qualquer servidor estatico, por exemplo:
+Também dá para servir a pasta com qualquer servidor estático, por exemplo:
 
 ```bash
 npx serve .
@@ -60,22 +60,22 @@ npx serve .
     +-- alvorada.png
 ```
 
-## Personalizacao rapida
+## Personalização rápida
 
-Para trocar o numero de WhatsApp, edite a constante abaixo em `script.js`:
+Para trocar o número de WhatsApp, edite a constante abaixo em `script.js`:
 
 ```js
 const WHATSAPP_NUMBER = "5598991856123";
 ```
 
-Para ajustar textos, secoes ou imagens, edite:
+Para ajustar textos, seções ou imagens, edite:
 
-- `index.html` para conteudo, links e estrutura.
-- `styles.css` para cores, espacamentos e comportamento visual.
-- `assets/` para logos, mockups e imagens do portfolio.
+- `index.html` para conteúdo, links e estrutura.
+- `styles.css` para cores, espaçamentos e comportamento visual.
+- `assets/` para logos, mockups e imagens do portfólio.
 
 ## Proposta do site
 
-A ALGdivulga+ foi pensada para negocios que querem sair de uma presenca digital improvisada e chegar em uma apresentacao mais confiavel, bonita e pronta para gerar conversas reais com clientes.
+A ALGdivulga+ foi pensada para negócios que querem sair de uma presença digital improvisada e chegar em uma apresentação mais confiável, bonita e pronta para gerar conversas reais com clientes.
 
-> Mais credibilidade. Mais presenca. Mais oportunidades.
+> Mais credibilidade. Mais presença. Mais oportunidades.

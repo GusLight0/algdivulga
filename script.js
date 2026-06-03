@@ -1,6 +1,6 @@
 const WHATSAPP_NUMBER = "5598991856123";
 const DEFAULT_MESSAGE =
-  "Ol\u00e1, quero solicitar um or\u00e7amento para um site com a ALGdivulga+.";
+  "Olá, quero solicitar um orçamento para um site com a ALGdivulga+.";
 
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
@@ -50,8 +50,8 @@ function buildLeadPayload(formData) {
 
 function buildLeadMessage(payload) {
   return [
-    `Ol\u00e1, sou ${payload.nome || "cliente"}.`,
-    `Quero solicitar um or\u00e7amento para: ${payload.projeto || "site"}.`,
+    `Olá, sou ${payload.nome || "cliente"}.`,
+    `Quero solicitar um orçamento para: ${payload.projeto || "site"}.`,
     payload.mensagem ? `Resumo: ${payload.mensagem}` : "",
   ]
     .filter(Boolean)
@@ -109,8 +109,8 @@ window.addEventListener(
 );
 
 navToggle?.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  const isOpen = navMenu?.classList.toggle("is-open") || false;
+  navToggle?.setAttribute("aria-expanded", String(isOpen));
 });
 
 navMenu?.addEventListener("click", (event) => {

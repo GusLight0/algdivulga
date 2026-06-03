@@ -1,144 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/logo-site.png" type="image/x-icon">
-    <title>ALGdivulga</title>
-</head>
-<body>
-    <!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato WhatsApp</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contato pelo WhatsApp | ALGdivulga+</title>
+    <meta
+      name="description"
+      content="Envie uma descrição rápida do que você precisa e fale com a ALGdivulga+ pelo WhatsApp."
+    >
+    <link rel="icon" type="image/png" href="assets/favicon-logo.png">
     <style>
-        /* Fundo com gradiente */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            font-family: Arial, sans-serif;
-        }
+      :root {
+        --ink: #111111;
+        --paper: #ffffff;
+        --muted: #f3eee6;
+        --line: #ded3c4;
+        --gold: #b88a4a;
+        --whatsapp: #25d366;
+        --radius: 8px;
+      }
 
-        /* Card central */
-        .card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-            position: relative; /* Para posicionar o X dentro */
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        /* Ícone de fechar */
-        .close-icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 18px;
-            color: #888;
-        }
+      body {
+        min-height: 100svh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: var(--ink);
+        background:
+          linear-gradient(135deg, rgba(243, 238, 230, 0.92), rgba(255, 255, 255, 0.96)),
+          var(--paper);
+        font-family: Inter, Montserrat, Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
 
-        .close-icon a {
-            text-decoration: none;
-            color: rgb(99, 99, 99);
-            font-weight: 800;
-        }
+      main {
+        width: min(100%, 460px);
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 24px 70px rgba(11, 11, 11, 0.14);
+      }
 
-        .close-icon a:hover {
-            color: #3d3d3d;
-        }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
 
-        .card h2 {
-            margin-top: 10px;
-            color: #333;
-        }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        text-decoration: none;
+      }
 
-        .card p {
-            color: #25D366;
-            font-weight: 600;
-            margin-top: -20px;
-            margin-bottom: 40px;
-        }
+      .brand img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border: 1px solid var(--ink);
+        border-radius: 50%;
+      }
 
-        textarea {
-            width: 100%;
-            height: 100px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            resize: none;
-            font-size: 16px;
-        }
+      .brand strong {
+        display: block;
+        line-height: 1.15;
+      }
 
-        .whatsapp-button {
-            background-color: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+      .brand small {
+        color: #625c52;
+      }
 
-        .whatsapp-button:hover {
-            background-color: #1ebe5d;
-            transform: scale(1.05);
-        }
+      .close-link {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        color: var(--ink);
+        background: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+      }
 
-        .whatsapp-icon {
-            width: 20px;
-            height: 20px;
-        }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 1.55rem;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0 0 20px;
+        color: #625c52;
+        line-height: 1.55;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 132px;
+        padding: 12px;
+        color: var(--ink);
+        background: #fbf8f3;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        resize: vertical;
+        font: inherit;
+      }
+
+      textarea:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 4px rgba(184, 138, 74, 0.14);
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #ffffff;
+        background: #111111;
+        border: 0;
+        border-radius: var(--radius);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+      }
+
+      button::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: var(--whatsapp);
+        border-radius: 50%;
+      }
+
+      .note {
+        min-height: 22px;
+        margin: 12px 0 0;
+        color: #625c52;
+        font-size: 0.92rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <main>
+      <div class="topbar">
+        <a class="brand" href="index.html" aria-label="Voltar para a página inicial da ALGdivulga+">
+          <img src="assets/LOGO-2.png" alt="">
+          <span>
+            <strong>ALGdivulga+</strong>
+            <small>Contato rápido</small>
+          </span>
+        </a>
+        <a class="close-link" href="index.html" aria-label="Fechar formulário">x</a>
+      </div>
 
-    <div class="card">
-        <!-- Ícone de fechar -->
-        <div class="close-icon"><a href="/index.html">X</a></div>
+      <h1>Do que você precisa?</h1>
+      <p>Descreva rapidamente seu projeto e abra uma conversa pronta no WhatsApp.</p>
 
-        <h2>Do que você precisa?</h2>
-        <p>(suporte pelo Whatz)</p>
-        <textarea id="descricao" placeholder="coloque aqui as informações"></textarea>
-        <br>
-        <button class="whatsapp-button" onclick="enviarParaWhatsApp()">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-            Enviar Descrição
-        </button>
-    </div>
+      <form id="whatsapp-form">
+        <label for="descricao">
+          Descrição
+          <textarea
+            id="descricao"
+            name="descricao"
+            placeholder="Exemplo: quero uma landing page para divulgar meus serviços..."
+            required
+          ></textarea>
+        </label>
+        <button type="submit">Enviar descrição</button>
+        <p class="note" id="form-note" aria-live="polite"></p>
+      </form>
+    </main>
 
     <script>
-        function enviarParaWhatsApp() {
-            var descricao = document.getElementById('descricao').value.trim();
+      const form = document.querySelector("#whatsapp-form");
+      const textarea = document.querySelector("#descricao");
+      const note = document.querySelector("#form-note");
+      const whatsappNumber = "5598991856123";
 
-            if (descricao === "") {
-                alert("Por favor, digite uma mensagem antes de enviar.");
-                return;
-            }
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-            var textoFormatado = encodeURIComponent(descricao);
-            var numero = '5598991856123'; // <<< Troque aqui pelo seu número real
+        const descricao = textarea.value.trim();
 
-            var link = "https://wa.me/" + numero + "?text=" + textoFormatado;
-            window.open(link, '_blank');
+        if (!descricao) {
+          note.textContent = "Digite uma descrição antes de enviar.";
+          textarea.focus();
+          return;
         }
-    </script>
 
-</body>
-</html>
+        const message = encodeURIComponent(`Olá, quero solicitar um orçamento. ${descricao}`);
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank", "noopener");
+        note.textContent = "Mensagem pronta. O WhatsApp foi aberto para envio.";
+      });
+    </script>
+  </body>
 </html>
